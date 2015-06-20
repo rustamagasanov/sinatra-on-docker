@@ -41,4 +41,16 @@ curl localhost:32769
 # That's it!
 ```
 
+## Other useful options
+
+```bash
+# Attach to a running container(sig-proxy set to false won't transfer signals to container, so you can detach with ctrl+c):
+docker attach --sig-proxy=false *container_id or container_name*
+
+# To enter a box:
+docker run -it *image_name* /bin/bash
+
+# Stop a box:
+docker kill *container_id or container_name*
+```
 
