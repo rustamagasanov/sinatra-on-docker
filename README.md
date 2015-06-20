@@ -26,4 +26,19 @@ sudo su
 cd /vagrant
 docker build -t=sinatra-test .
 
+# Now you should see sinatra-test in images list:
+# docker images
+
+# Start a container from sinatra-test image(-P=Publish all exposed ports to random ports, -d=Run container in background):
+docker run -P -d sinatra-test
+
+# Check ports mapping:
+docker ps
+
+# Check sinatra application is running(You should see "Hello world" message):
+curl localhost:32769
+
+# That's it!
 ```
+
+
